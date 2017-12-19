@@ -1,0 +1,183 @@
+ul, li
+  padding: 0
+  margin: 0
+
+
+.nav-button:focus
+  outline-color: transparent
+  outline-style: none
+
+
+header
+  position: fixed
+  z-index: 2
+  width: 100%
+  border-bottom: 1px solid $mid-light-gray
+  background-color: $white
+
+
+.header-container
+  background-color: $white
+  max-width: 1200px
+  height: 100px
+  margin: 0 auto
+  padding: 0 25px 0 25px
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.header-shadow
+  box-shadow: 0 2px 10px 0 transparentize($gray, 0.35)
+
+.logo-container
+  display: flex
+  justify-content: center
+  align-items: center
+  a
+    line-height: 0
+.logo
+  width: 60px
+  height: 60px
+  fill: $dark-gray
+  transition: fill 0.4s ease-out
+
+.logo:hover
+  fill: $blue
+
+.nav
+  height: 100%
+  display: flex
+  align-items: center
+
+  .nav-group
+    height: 100%
+    list-style-type: none
+    display: flex
+    flex-direction: row
+    align-items: center
+
+  .nav-button
+    display: flex
+    align-items: center
+    height: 100%
+    padding: 5px 20px 5px 20px
+    cursor: pointer
+
+
+  .nav-button:hover
+    font-weight: 700
+    color: $darker-gray
+    background-color: $gray
+
+
+  .nav-button-checked
+    font-weight: 700
+    color: $darker-gray
+    background-color: $light-gray
+
+
+
+
+.hamburger
+  display: none
+  fill: $dark-gray
+  line-height: 0
+  transition: fill 0.1s ease-out
+
+.hamburger:hover
+  fill: $blue
+
+.sidenav
+  display: none
+  height: 100%
+  width: 300px
+  position: fixed
+  z-index: 3
+  top: 0
+  right: -300px
+  background-color: $darkest-gray
+  overflow-x: hidden
+  padding-top: 100px
+  transition: 0.5s
+
+
+/* The navigation menu links */
+.sidenav a
+    padding: 8px 8px 8px 60px
+    text-decoration: none
+    font-size: 25px
+    color: $dark-gray
+    display: block
+    transition: 0.3s
+
+.sidenav a:nth-child(2)
+    // border-bottom: 1px solid $mid-light-gray
+    border-top: 1px solid $darker-gray
+
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover
+    color: $blue
+    font-weight: 400
+    background-color: $darker-gray
+
+
+.sidenav a.closebtn:hover
+    background-color: transparent
+    fill: $blue
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn
+    position: absolute
+    top: 20px
+    right: 25px
+    padding: 10px 14px 10px 42px
+    font-size: 36px
+    // width: 100%
+    fill: $dark-gray
+    display: flex
+    justify-content: flex-end
+
+
+
+
+
+
+
+.sidenav-active
+    transform: translateX(-300px)
+
+.current-page-sidenav
+    color: $blue !important
+    font-weight: 400
+    // background-color: $light-gray
+
+
+
+@media screen and (max-width: 1245px)
+  .header-container
+    padding: 0 40px 0 40px
+
+
+@media screen and (max-width: 650px)
+
+  .nav
+    display: none
+
+  .hamburger
+    display: block
+
+  .sidenav
+    display: block
+    width: 100vw
+    right: -100vw
+
+  .sidenav-active
+      transform: translateX(-100vw)
+
+
+@media screen and (max-height: 450px)
+    .sidenav
+      padding-top: 15px
+    .sidenav a
+      font-size: 18px
