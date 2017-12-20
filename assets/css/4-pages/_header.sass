@@ -103,54 +103,49 @@ header
 
 /* The navigation menu links */
 .sidenav a
-    padding: 8px 8px 8px 60px
-    text-decoration: none
-    font-size: 25px
-    color: $dark-gray
-    display: block
-    transition: 0.3s
+  padding: 8px 8px 8px 60px
+  text-decoration: none
+  font-size: 25px
+  color: $dark-gray
+  display: block
+  transition: 0.3s
 
 .sidenav a:nth-child(2)
-    // border-bottom: 1px solid $mid-light-gray
-    border-top: 1px solid $darker-gray
+  // border-bottom: 1px solid $mid-light-gray
+  border-top: 1px solid $darker-gray
 
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover
-    color: $blue
-    font-weight: 400
-    background-color: $darker-gray
+  color: $blue
+  font-weight: 400
+  background-color: $darker-gray
 
 
 .sidenav a.closebtn:hover
-    background-color: transparent
-    fill: $blue
+  background-color: transparent
+  fill: $blue
 
 /* Position and style the close button (top right corner) */
 .sidenav .closebtn
-    position: absolute
-    top: 20px
-    right: 25px
-    padding: 10px 14px 10px 42px
-    font-size: 36px
-    // width: 100%
-    fill: $dark-gray
-    display: flex
-    justify-content: flex-end
-
-
-
-
-
+  position: absolute
+  top: 20px
+  right: 25px
+  padding: 10px 14px 10px 42px
+  font-size: 36px
+  // width: 100%
+  fill: $dark-gray
+  display: flex
+  justify-content: flex-end
 
 
 .sidenav-active
-    transform: translateX(-300px)
+  transform: translateX(-300px)
 
 .current-page-sidenav
-    color: $blue !important
-    font-weight: 400
-    // background-color: $light-gray
+  color: $blue !important
+  font-weight: 400
+  // background-color: $light-gray
 
 
 
@@ -168,16 +163,16 @@ header
     display: block
 
   .sidenav
-    display: block
+    display: flex
+    flex-direction: column
     width: 100vw
     right: -100vw
 
   .sidenav-active
-      transform: translateX(-100vw)
+    transform: translateX(-100vw)
 
 
 @media screen and (max-height: 450px)
-    .sidenav
-      padding-top: 15px
-    .sidenav a
-      font-size: 18px
+
+  .sidenav a
+    font-size: 18px

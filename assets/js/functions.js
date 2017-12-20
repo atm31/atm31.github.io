@@ -6,12 +6,18 @@ var i;
 for (i = 0; i < acc.length; i++) {
   acc[i].onclick = function() {
     this.classList.toggle("active");
+    this.classList.toggle("active-style");
     var panel = this.nextElementSibling;
     if (panel.style.maxHeight){
       panel.style.maxHeight = null;
     } else {
       panel.style.maxHeight = panel.scrollHeight + "px";
     }
+    // if (panel.style.borderBottom){
+    //   panel.style.borderBottom = null;
+    // } else {
+    //   panel.style.borderBottom = "1 solid #d9d9d9";
+    // }
   }
 }
 });

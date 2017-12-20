@@ -431,16 +431,14 @@ header {
     display: block; }
 
   .sidenav {
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: 100vw;
     right: -100vw; }
 
   .sidenav-active {
     transform: translateX(-100vw); } }
 @media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px; }
-
   .sidenav a {
     font-size: 18px; } }
 .wrap-mobile {
@@ -681,6 +679,7 @@ button {
   border: none; }
 
 button.accordion {
+  background-color: #fff;
   color: #666;
   cursor: pointer;
   padding: 18px;
@@ -696,7 +695,7 @@ button.accordion {
   justify-content: space-between; }
 
 button.accordion:first-child {
-  border-top: 1px solid #e8e8e8; }
+  border-top: 1px solid #d9d9d9; }
 
 button.accordion:hover {
   background-color: #fff;
@@ -728,6 +727,32 @@ div.panel {
   margin: 0 0 30px 0; }
 
 @media screen and (max-width: 1135px) {
+  button.accordion:hover {
+    border-top: none;
+    border-bottom: 1px solid #d9d9d9;
+    border-right: 1px solid #d9d9d9;
+    border-left: 1px solid #d9d9d9;
+    transform: none; }
+    button.accordion:hover svg {
+      fill: #666; }
+    button.accordion:hover h4 {
+      color: #666; }
+
+  button.accordion:first-child:hover {
+    border-top: 1px solid #d9d9d9; }
+
+  button.accordion.active-style {
+    background-color: #fff;
+    border: 1px solid #4282F4;
+    transform: scale(1.04); }
+    button.accordion.active-style svg {
+      fill: #4282F4; }
+    button.accordion.active-style h4 {
+      color: #4282F4; }
+
+  button.accordion.active-style:hover {
+    border-top: 1px solid #4282F4; }
+
   .about-portrait {
     display: none; }
 
